@@ -1,0 +1,40 @@
+@mixin typography($font-size, $font-weight) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+}
+
+@mixin flex($justify-content, $align-items, $direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  @content;
+}
+
+@mixin gmarket {
+  font-family: "GmarketSans";
+}
+
+@mixin scroll-remove {
+  /* IE and Edge */
+  -ms-overflow-style: none;
+  /* Firefox */
+  scrollbar-width: none;
+  /* Safari and Chrome */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@mixin custom-scroll {
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    height: 230px;
+    background-color: $color-gray-2;
+    background-clip: padding-box;
+    border-right: 4px solid transparent;
+  }
+}

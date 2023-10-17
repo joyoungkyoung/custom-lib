@@ -1,0 +1,171 @@
+[class*="btn-"]:not(.btn-wrapper) {
+  height: 56px;
+  border-radius: 20px;
+  padding: 0 20px;
+
+  @include flex(center, center);
+  @include b-14;
+
+  &:hover {
+  }
+  &.min {
+    width: 120px;
+  }
+  &.mid {
+    width: 150px;
+  }
+  &.full {
+    width: 100%;
+  }
+
+  &.small {
+    width: 80px;
+  }
+
+  &.height-46 {
+    height: 46px;
+  }
+  &.height-40 {
+    height: 40px;
+    @include b-12;
+  }
+
+  &.disabled {
+    pointer-events: none;
+    border-color: $color-gray-3;
+    background-color: $color-gray-3;
+
+    &.gray-3 {
+      color: $color-gray-3;
+    }
+
+    &.outlined {
+      background-color: $color-white;
+    }
+  }
+}
+
+.btn-wrapper {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+}
+
+.btn-primary {
+  color: $color-white;
+  background-color: $color-mint-light;
+  border: 1px solid $color-mint-light;
+
+  &.primary-disabled {
+    pointer-events: none;
+    border-color: $color-gray-3;
+    background-color: $color-gray-3;
+    color: $color-white;
+  }
+
+  &.outlined {
+    color: $color-mint-light;
+    background-color: $color-white;
+  }
+
+  &.border-none {
+    border-width: 0;
+  }
+}
+
+.btn-primary-dark {
+  color: $color-white;
+  background-color: $color-mint-dark;
+  border: 1px solid $color-mint-dark;
+
+  &.primary-disabled {
+    pointer-events: none;
+    border-color: $color-gray-3;
+    background-color: $color-gray-3;
+    color: $color-white;
+  }
+
+  &.outlined {
+    color: $color-mint-dark;
+    background-color: $color-white;
+  }
+
+  &.border-none {
+    border-width: 0;
+  }
+}
+
+.btn-emerald {
+  color: $color-white;
+  background-color: $color-emerald-light;
+  border: 1px solid $color-emerald-light;
+  &:active {
+    background-color: $color-emerald-dark;
+  }
+
+  &.outlined {
+    color: $color-emerald-light;
+    background-color: $color-white;
+    &:active {
+      color: $color-white;
+      background-color: $color-emerald-light;
+    }
+  }
+
+  &.border-none {
+    border-width: 0;
+  }
+}
+
+.btn-orange {
+  color: $color-white;
+  background-color: $color-orange;
+  border: 1px solid $color-orange;
+  // &:active {
+  //   background-color: $color-emerald-dark;
+  // }
+
+  &.outlined {
+    color: $color-orange;
+    background-color: $color-white;
+    &:active {
+      background-color: $color-gray-05;
+    }
+  }
+
+  &.border-none {
+    border-width: 0;
+  }
+}
+
+.btn-gray-5 {
+  color: $color-white;
+  background-color: $color-gray-5;
+  border: 1px solid $color-gray-5;
+
+  &.outlined {
+    color: $color-gray-5;
+    background-color: $color-white;
+  }
+
+  &.border-none {
+    border-width: 0;
+  }
+}
+
+.btn-pink {
+  color: $color-white;
+  background-color: $color-pink;
+  border: none;
+
+  &.outlined {
+    color: $color-pink;
+    background-color: $color-white;
+  }
+}
+
+.btn-gray-8 {
+  color: $color-white;
+  background-color: $color-gray-8;
+  border: 1px solid $color-gray-8;
+}
