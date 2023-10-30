@@ -1,8 +1,7 @@
-import { ModalDispatchContext, ModalPropsType } from "@/contexts/modal/ModalContext";
-import { useContext } from "react";
+import { ModalPropsType, useModalStore } from "@/stores/modalStore";
 
 export default function useModal() {
-  const { open, close } = useContext(ModalDispatchContext);
+  const { open, close } = useModalStore();
 
   const openModal = (Component: (props: ModalPropsType) => JSX.Element, props: ModalPropsType) => {
     open(Component, props);
